@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, getByTestId } from '@testing-library/react';
+import { render, fireEvent, waitForElement, getByTestId } from '@testing-library/react';
 import ContactForm from './ContactForm';
 
 test('form is rendering properly', () => {
@@ -21,5 +21,21 @@ test('add a new user', () =>{
     
     expect(firstNameInput.value).toBe("testing");
 
-    // fireEvent.click(getByTestID(/submit/i));
+    // getByText(/submit/i);
 })
+    // fireEvent.click(getByText(/submit/i));
+
+    //add a test for testing the pre element 
+
+    // test('test data return', async () =>{
+    //     const { getByLabelText, getByText } = render(<ContactForm/>);
+    
+    //     //test data
+        
+    //     //fireEvent.change(firstNameInput, {target: {value: "testing"}});
+    
+    //     await waitForElement(()=> //query for pre element goes here);
+    //     expect(firstNameInput.value).toBe("testing");
+    
+        
+    // })
